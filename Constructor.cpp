@@ -2,34 +2,18 @@
 #include<iostream>
 
 class parentA{
-        private:
-           int a;
-           int b;
-        
-        public:
-          parentA(int p, int q){
-                a=p;
-                b=q;
-          }
-        parentA()
-        {
+    public:
+        parentA(){
         	std::cout<<"******************************************************* \n";
             std::cout<<"I am default constructor of ParentA \n";
 		}
-        void show(){
-            std::cout<<"I am show from ParentA class \n"<<a<<"   "<<b<<"\n";
-        }
          ~parentA(){
-        std::cout<<"I am desctructor of parentA \n";
-    }
+        	std::cout<<"I am desctructor of parentA \n";
+   		}
 };
 class childB : public parentA{
 public:
-   int c;
-   int d;
-
-    childB()
-    {
+    childB(){
         std::cout<<"I am constructor of childB from Parent A \n";
     }
     ~childB(){
@@ -39,97 +23,80 @@ public:
 
 class childC : public parentA{
 public:
-    childC()
-    {
+    childC(){
         std::cout<<"I am constructor of childC from Parent A \n";
     }
-    ~childC()
-    {
+    ~childC(){
         std::cout<<"I am Destructor of childC \n";
     }
 };
 
 class childD : public childB{
 public:
-    childD()
-    {
+    childD(){
         std::cout<<"I am constructor of childD from ChildB \n";
     }
-    ~childD()
-    {
+    ~childD(){
         std::cout<<"I am Destructor of childD \n";
     }
 };
 class childE : public childB{
 public:
-    childE()
-    {
+    childE(){
         std::cout<<"I am constructor of childE from ChildB \n";
     }
-    ~childE()
-    {
+    ~childE(){
         std::cout<<"I am destructor of childE \n";
     }
 };
 
 class childH : public childD, public childE{
 public:
-    childH()
-    {
+    childH(){
         std::cout<<"I am constructor of childH from ChildD and ChildE \n";
     }
-    ~childH()
-    {
+    ~childH(){
         std::cout<<"I am destructor of childH \n";
     }
 };
 
 class childF : public childC{
 public:
-    childF()
-    {
+    childF(){
         std::cout<<"I am constructor of childF from ChildC \n";
     }
-    ~childF()
-    {
+    ~childF(){
         std::cout<<"I am destructor of childF \n";
     }
 };
 class childG : public childC{
 public:
-    childG()
-    {
+    childG(){
         std::cout<<"I am constructor of childG from ChildC \n";
     }
-    ~childG()
-    {
+    ~childG(){
          std::cout<<"I am destructor of childG \n";
     }
 };
 
 class childI : public childF, public childG{
 public:
-    childI()
-    {
+    childI(){
         std::cout<<"I am constructor of childI from ChildF and ChildG \n";
     }
-    ~childI()
-    {
+    ~childI(){
          std::cout<<"I am destructor of childI \n";
     }
 };
 
 class childJ : public childH, public childI{
 public:
-    childJ()
-    {
+    childJ(){
         std::cout<<"I am constructor of childJ from ChildH and ChildI \n\n\n";
         std::cout<<"**************** Desctructos ********************** \n";
     }
-    ~childJ()
-    {
+    ~childJ(){
          std::cout<<"I am destructor of childJ \n";
-
     }
 };
 
