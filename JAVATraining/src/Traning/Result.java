@@ -1,10 +1,17 @@
 package Traning;
 
+import java.util.Scanner;
+
+
 public class Result {
 
 	public static void main(String[] args) {
-		int a=6;
-		int b=5;
+		
+		Scanner sc= new Scanner(System.in); //System.in is a standard input stream.
+		System.out.print("Enter first number- ");
+		int a= sc.nextInt();
+		System.out.print("Enter second number- ");
+		int b= sc.nextInt();
 		
 		Maths m = new Maths();
 		m.add(a, b);
@@ -13,6 +20,5 @@ public class Result {
 		m.div(a, b);
 		m.square(a, b);
 		m.cube(a, b);
-
 	}
 }
