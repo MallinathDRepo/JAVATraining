@@ -13,8 +13,6 @@ public class Result {
 		m.div(a, b);
 		m.square(a, b);
 		m.cube(a, b);
-		
-		Scanner sc = new Scanner();
-		
+
 	}
 }
