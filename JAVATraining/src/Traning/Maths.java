@@ -6,7 +6,7 @@ public class Maths {
 		int no1 = a;
 		int no2 = b;
 		int addition = no1+no2;
-		System.out.println("Addition = "+addition+"\n");
+		System.out.println("\n22Addition = "+addition+"\n");
 	}
 	public void multiply(int a, int b) {
 		int no1 = a;
@@ -38,7 +38,6 @@ public class Maths {
 		int no2 = b;
 		int cube1 = no1*no1*no1;
 		int cube2 = no2*no2*no2;
-
 		System.out.println("Cube of No 1 = "+cube1+"\nCube of No 2 = "+cube2+"\n");
 	}
 }

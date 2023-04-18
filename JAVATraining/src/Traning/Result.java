@@ -12,7 +12,6 @@ public class Result {
 		int a= sc.nextInt();
 		System.out.print("Enter second number- ");
 		int b= sc.nextInt();
-		
 		Maths m = new Maths();
 		m.add(a, b);
 		m.multiply(a, b);
