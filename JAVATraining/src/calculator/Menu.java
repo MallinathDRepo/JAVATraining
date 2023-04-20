@@ -4,9 +4,15 @@ import java.io.IOException;
 
 public class Menu extends Maths{
 
-	public void mathMenu() {
+	public void show() {
 		System.out.println("--------- Select the operation to perform -----------");
-		System.out.println("1. Addition \n2. Substraction \n3. Multiplication \n4. Division \n5. Square \n6. Cube");
-		System.out.print("operation  = ");
+		System.out.println("1. Addition");
+		System.out.println("2. Substraction");
+		System.out.println("3. Multiplication");
+		System.out.println("4. Division");
+		System.out.println("5. Square");
+		System.out.println("6. Cube");
+
+		System.out.print("Operation No = ");
 	}
 }

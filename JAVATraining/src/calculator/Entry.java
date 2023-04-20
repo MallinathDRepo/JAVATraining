@@ -6,10 +6,9 @@ public class Entry {
 	public static void main(String[] args) throws IOException {
 	
 		Menu m = new Menu();		
-		m.mathMenu();
+		m.show();
 		
 		int operation = GetInput.readInteger();
-		System.out.println(" You have selected Addition operation \n");
 		
 		System.out.print("Enter 1st Number : ");
 		int number1 = GetInput.readInteger();
@@ -39,15 +38,13 @@ public class Entry {
 		}
 		
 		System.out.println("\n ****** Do you wish to perform more operations?  Yes = 1  Exit = 0");
-		System.out.print("Choice = ");
 		int repeat = GetInput.readInteger();
 		
 		switch(repeat) {
 		case 1:
-			m.mathMenu();
+			m.show();
 			break;
 		case 0:
-			System.out.println("----- End -----");
 			break;
 		}
 	}
