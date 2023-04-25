@@ -5,17 +5,16 @@ import java.io.IOException;
 public class Entry {
 	public static void main(String[] args) throws IOException {
 	
-		Menu m = new Menu();		
+		Menu m = new Menu();
 		m.show();
-		
 		int operation = GetInput.readInteger();
 		
 		System.out.print("Enter 1st Number : ");
 		int number1 = GetInput.readInteger();
-		
+
 		System.out.print("\nEnter 2nd Number : ");
 		int number2 = GetInput.readInteger();
-		
+	
 		switch(operation) {
 		case 1:
 			 m.add(number1, number2);
@@ -42,7 +41,6 @@ public class Entry {
 		
 		switch(repeat) {
 		case 1:
-			m.show();
 			break;
 		case 0:
 			break;
