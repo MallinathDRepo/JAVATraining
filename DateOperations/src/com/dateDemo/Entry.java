@@ -1,4 +1,4 @@
-package dateDemo;
+package com.dateDemo;
 
 import java.util.*;
 import com.DateOperation.MyDate;
