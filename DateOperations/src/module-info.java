@@ -6,4 +6,5 @@
  *
  */
 module DateOperations {
+	requires java.desktop;
 }

@@ -37,13 +37,11 @@ public class Entry {
 		}
 		else if (mon==2 && leap==true)
 		{
-			System.out.println("Month is of 29 Days & is leap year");
+			System.out.println("Month is of 29 Days & is LEAP year");
 		}
 		else
 			System.out.println("\nMonth is of 31 Days");
 		
 		sc.close();
 	}
-	
-	
 }
