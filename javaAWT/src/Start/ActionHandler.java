@@ -17,15 +17,15 @@ public class ActionHandler implements ActionListener{
 	}
 
 	public void actionPerformed(ActionEvent e) throws NumberFormatException {
-//		System.out.println(e.getActionCommand());
+
 		if(e.getActionCommand().equalsIgnoreCase("add")) {
 		   try {
 			   		int number_1 = Integer.parseInt(this.firsrtTf.getText());
 			   		int number_2 = Integer.parseInt(this.secondTf.getText());
 			   		sum = number_1+number_2;
-			   		System.out.println(sum);
-			   
-		   }
+//			   		System.out.println(sum);
+			   		ActionHandler(sum);
+		   		}	
 		   catch(Exception exc) { }
 		   
 		}else if (e.getActionCommand().equalsIgnoreCase("subtract")) {
@@ -34,7 +34,8 @@ public class ActionHandler implements ActionListener{
 		}
 	}
 	
-		public void ActionHandler(int total) {
-			
+		public int ActionHandler(int total) {
+			System.out.println("Total : "+total);
+			return total;
 		}
 }
