@@ -11,7 +11,8 @@ public class JugglerFrame extends Frame{
 	private TextField number1Txt;
 	private TextField number2Txt;
 	private TextField number3Txt;
-	Button BtnclockWise,BtnAnitclockWise;
+	private Button BtnclockWise;
+	private Button BtnAnitclockWise;
 
 	public JugglerFrame() {
 	
