@@ -1,4 +1,4 @@
-package Traning;
+package Training;
 
 public class Maths {
 	public void add(int a, int b) {
