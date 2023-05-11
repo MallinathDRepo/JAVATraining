@@ -354,7 +354,6 @@ public class EmpFrameDesign extends Frame{
 	public void setGenderGroup(CheckboxGroup genderGroup) {
 		this.genderGroup = genderGroup;
 	}
-	
 
 	public Label getLocationLbl() {
 		return locationLbl;

@@ -40,34 +40,28 @@ public class EmpOperations implements ActionListener {
 		}
 		
 		private void last(EmployeeDTO dto) {
-			// TODO Auto-generated method stub
-			
+		
 		}
 
 		private void previous(EmployeeDTO dto) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		private void next(EmployeeDTO dto) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		private void first(EmployeeDTO dto) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		private void search(EmployeeDTO dto) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		public void saveOrUpdate(EmployeeDTO empDto) {
-			// this will save or update in DB
+			System.out.println("This is update");
 		}
-		
 		
 		public EmployeeDTO getEmployeeData(EmpFrameDesign ef) {
 		
