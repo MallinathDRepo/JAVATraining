@@ -56,9 +56,9 @@ public class MyFrame extends Frame{
 		subButton.addActionListener(new ActionHandler(firstTf,secondTf));
 		int as=0;
 //		ActionHandler a = new ActionHandler(as);
-		int sss= as;
+//		int sss= as;
 //		int as = a.sum;
-		System.out.println("as === = "+as);
+//		System.out.println("as === = "+as);
 		
 //		String resultw = String.valueOf(as);
 		//System.out.println("jsflsdf === = "+result);
@@ -67,8 +67,6 @@ public class MyFrame extends Frame{
 		// Single delegate for all types of events
 		this.addWindowListener(new MasterWindowHandler());
 		this.addMouseListener(new MasterWindowHandler());
-		this.addMouseMotionListener(new MasterWindowHandler());
-	    
-		
+		this.addMouseMotionListener(new MasterWindowHandler());		
 	}
 }

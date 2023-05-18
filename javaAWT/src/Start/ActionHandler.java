@@ -9,7 +9,7 @@ public class ActionHandler implements ActionListener{
 	
 	private TextField firsrtTf;
 	private TextField secondTf;
-	int sum;
+	int sum, substract;
 	
 	public ActionHandler(TextField firstTf, TextField secondTf) {
 		this.firsrtTf = firstTf;
@@ -29,8 +29,10 @@ public class ActionHandler implements ActionListener{
 		   catch(Exception exc) { }
 		   
 		}else if (e.getActionCommand().equalsIgnoreCase("subtract")) {
-			System.out.println(this.firsrtTf.getText());
-			System.out.println(this.secondTf.getText());
+			int number_1 = Integer.parseInt(this.firsrtTf.getText());
+	   		int number_2 = Integer.parseInt(this.secondTf.getText());
+			substract= number_1-number_2;
+	   		System.out.println(substract);
 		}
 	}
 	

@@ -39,25 +39,15 @@ public class EmpOperations implements ActionListener {
 			}
 		}
 		
-		private void last(EmployeeDTO dto) {
-		
-		}
+		private void last(EmployeeDTO dto) { }
 
-		private void previous(EmployeeDTO dto) {
-			
-		}
+		private void previous(EmployeeDTO dto) { }
 
-		private void next(EmployeeDTO dto) {
-			
-		}
+		private void next(EmployeeDTO dto)  { }
 
-		private void first(EmployeeDTO dto) {
-			
-		}
+		private void first(EmployeeDTO dto)  { }
 
-		private void search(EmployeeDTO dto) {
-			
-		}
+		private void search(EmployeeDTO dto)  { }
 
 		public void saveOrUpdate(EmployeeDTO empDto) {
 			System.out.println("This is update");
@@ -75,7 +65,8 @@ public class EmpOperations implements ActionListener {
 			empDTO.setMealCard(ef.getMealCardOption().getState());
 			empDTO.setOfficeLocation(ef.getOfficeLocation().getSelectedItem());
 			
-			System.out.println(empDTO);
+			
+//			System.out.println(empDTO);
 			return empDTO;
 		}
 }
