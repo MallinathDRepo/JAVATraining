@@ -29,6 +29,7 @@ public class TestInterface implements MyInterface, Interface2{
 		int no2 = sc.nextInt();
 		
 		ti.addition(no1, no2);
-		ti.multiply(no1, no2);		
+		ti.multiply(no1, no2);
+		sc.close();
 	}
 }

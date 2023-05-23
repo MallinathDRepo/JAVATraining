@@ -1,11 +1,10 @@
-package com.employeeDetailsForm;
+package com.encora.employee.dto;
 
-public class EmployeeDTO {		// DTO - Data Transfer Object
-private int employeeID;
+public class EmployeeDTO {
+
+	private int employeeID;
 	
 	private String employeeName;
-	
-	private Double employeeMobile;
 	
 	private String gender;
 	
@@ -17,7 +16,7 @@ private int employeeID;
 	
 	private Boolean nps;
 	
-	private Boolean mediclaim;
+	private Boolean medilcaim;
 	
 	private String officeLocation;
 
@@ -36,14 +35,6 @@ private int employeeID;
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
 	}
-	
-	public Double getEmployeeMobile() {
-		return employeeMobile;
-	}
-	
-	public void setEmployeeMobile(Double mobile) {
-		this.employeeMobile = mobile;
-	}
 
 	public String getGender() {
 		return gender;
@@ -60,6 +51,7 @@ private int employeeID;
 	public void setPf(Boolean pf) {
 		this.pf = pf;
 	}
+
 	public Boolean getGraduity() {
 		return graduity;
 	}
@@ -84,12 +76,12 @@ private int employeeID;
 		this.nps = nps;
 	}
 
-	public Boolean getmediclaim() {
-		return mediclaim;
+	public Boolean getMedilcaim() {
+		return medilcaim;
 	}
 
-	public void setmediclaim(Boolean mediclaim) {
-		this.mediclaim = mediclaim;
+	public void setMedilcaim(Boolean medilcaim) {
+		this.medilcaim = medilcaim;
 	}
 
 	public String getOfficeLocation() {
@@ -99,7 +91,18 @@ private int employeeID;
 	public void setOfficeLocation(String officeLocation) {
 		this.officeLocation = officeLocation;
 	}
+
 	
+	public boolean equals(EmployeeDTO dto) {
+		if(this.employeeID == dto.getEmployeeID())
+			return true;
+		return false;
+	}
+
+	public int hashCode() {
+		return this.employeeID;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -107,11 +110,9 @@ private int employeeID;
 		builder.append(employeeID);
 		builder.append(", employeeName=");
 		builder.append(employeeName);
-		builder.append(", employeeMobile=");
-		builder.append(employeeMobile);
 		builder.append(", gender=");
 		builder.append(gender);
-		builder.append(", perks=");
+		builder.append(", pf=");
 		builder.append(pf);
 		builder.append(", graduity=");
 		builder.append(graduity);
@@ -119,19 +120,11 @@ private int employeeID;
 		builder.append(mealCard);
 		builder.append(", nps=");
 		builder.append(nps);
-		builder.append(", mediclaim=");
-		builder.append(mediclaim);
+		builder.append(", medilcaim=");
+		builder.append(medilcaim);
 		builder.append(", officeLocation=");
 		builder.append(officeLocation);
 		builder.append("]");
 		return builder.toString();
-	}
-	
-//	@Override
-//	public String toString() {
-//		return "EmployeeDTO [employeeID=" + employeeID + ", employeeName=" + employeeName + ", employeeMobile=" + employeeMobile +
-//				", gender=" + gender + ", pf=" + pf + ", graduity=" + graduity + ", mealCard=" + mealCard + ", nps=" + nps + 
-//				", mediclaim="+ mediclaim + ", officeLocation=" + officeLocation + "]";
-//	}
-
+	}	
 }

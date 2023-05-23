@@ -3,26 +3,33 @@ package com.employeeDetailsForm;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.employeeDetailsForm.EmployeeService;
+import com.employeeDetailsForm.EmployeeServiceImpl;
+import com.employeeDetailsForm.EmployeeDTO;
+import com.employeeDetailsForm.EmpFrameDesign;
+
 public class EmpOperations implements ActionListener {
 
 	EmpFrameDesign ef ;
+	EmployeeService employeeService;
 	public EmpOperations(EmpFrameDesign employeeFrame) {
 		ef= employeeFrame;
+		employeeService = new EmployeeServiceImpl();
 	}
-
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			String action = e.getActionCommand().toLowerCase();
 			EmployeeDTO dto = getEmployeeData(ef);
 			switch(action) {
 			case "save": 
-						saveOrUpdate(dto);
-				        break;
+						employeeService.saveEmployee(dto);
+						break;
 			case "update":
 						saveOrUpdate(dto);
 						break;
 			case "search":
-						search(dto);
+						EmployeeDTO searchResult = employeeService.searchEmployee(dto);
 						break;
 			case "first":
 						first(dto);
@@ -58,7 +65,7 @@ public class EmpOperations implements ActionListener {
 			EmployeeDTO empDTO = new EmployeeDTO();
 			empDTO.setEmployeeID(Integer.parseInt(ef.getEmployeeIdTxt().getText()));
 			empDTO.setEmployeeName( ef.getEmployeeNameTxt().getText());
-			empDTO.setEmployeeMobile(ef.getEmployeeMobileTxt().getText());
+			empDTO.setEmployeeMobile(Double.parseDouble(ef.getEmployeeMobileTxt().getText()));
 			empDTO.setGender(ef.getGenderGroup().getSelectedCheckbox().getLabel());
 			empDTO.setPf(ef.getPfOption().getState());
 			empDTO.setGraduity(ef.getGradutiyOption().getState());

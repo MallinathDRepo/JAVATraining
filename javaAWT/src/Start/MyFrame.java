@@ -4,9 +4,6 @@ import java.awt.Button;
 import java.awt.Frame;
 import java.awt.Label;
 import java.awt.TextField;
-import java.awt.event.ComponentListener;
-
-import javax.swing.text.LabelView;
 
 public class MyFrame extends Frame{
 	
