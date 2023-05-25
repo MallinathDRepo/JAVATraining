@@ -5,7 +5,7 @@ public class Maths {
 		int no1 = a;
 		int no2 = b;
 		int addition = no1+no2;
-		System.out.println("\nAddition = "+addition+"\n");
+		System.out.println("\nAddition is = "+addition+"\n");
 	}
 
 	public void multiply(int a, int b) {
