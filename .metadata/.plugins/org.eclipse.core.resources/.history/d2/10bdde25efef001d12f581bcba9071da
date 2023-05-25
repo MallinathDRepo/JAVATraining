@@ -1,0 +1,14 @@
+package com.FileHandling;
+
+import java.io.File;
+
+public class FirstNotepad {
+	 public static void main(String[] args)
+	    {
+	 
+	        // File name specified
+	        File obj = new File("myfile.txt");
+	          System.out.println("File Created!");
+	          obj.canWrite()=true;
+	    }
+}

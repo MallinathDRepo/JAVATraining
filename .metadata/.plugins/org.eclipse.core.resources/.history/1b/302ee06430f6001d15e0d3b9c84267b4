@@ -1,0 +1,15 @@
+package com.FileHandling;
+
+import java.io.File;
+
+public class FileDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		 File f = new File("F:/Training/javaAWT/src/com/FileHandling/SecondFile.txt");
+		 
+
+	}
+
+}

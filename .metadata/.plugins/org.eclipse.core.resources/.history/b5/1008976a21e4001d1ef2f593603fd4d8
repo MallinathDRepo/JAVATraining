@@ -1,0 +1,15 @@
+package Triangle;
+
+import abstractDemo.Start;
+
+public class triangle extends Start{
+
+	public void side() {
+		int width, height;
+		float area = 0.5 * width * height;
+	}
+	
+//		Start s = new Start();
+	
+		
+}

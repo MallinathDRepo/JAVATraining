@@ -1,0 +1,14 @@
+package Triangle;
+
+import abstractDemo.Start;
+
+public class triangle extends Start{
+
+	public void side() {
+		
+	}
+	
+//		Start s = new Start();
+	
+		
+}

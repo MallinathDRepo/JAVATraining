@@ -1,0 +1,44 @@
+package com.FileHandling;
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.Reader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+
+
+public class FirstNotepad {
+	 public static void main(String[] args) throws IOException
+	    {
+		 File f = new File("F:/Training/javaAWT/src/com/FileHandling/FirstFile.txt");
+
+		 if(f.exists()) {
+	      		System.out.println("File already exist..!! Hence deleting the file");
+	      		f.delete();
+	      	}else
+	      	{
+	      		try {
+	      			f.createNewFile();
+	      			f.canWrite();
+	      			FileWriter fw = new FileWriter(f);
+	      			fw.write("i am");
+	      			f.canRead();
+
+	      			 BufferedReader br = new BufferedReader(new FileReader(f));
+	      			String st;
+	      	        // Condition holds true till
+	      	        // there is character in a string
+	      	        while ((st = br.readLine()) != null)
+	      	 
+	      	            // Print the string
+	      	            System.out.println(st);
+	      	   
+	      		}
+	      		catch(Exception e) {
+	      			e.printStackTrace();
+	      		}
+	      	}
+	    }
+}

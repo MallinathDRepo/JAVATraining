@@ -1,0 +1,17 @@
+package calculator;
+
+import java.io.IOException;
+
+public class Demo {
+	public static void main(String args[]) throws IOException {
+
+		byte b[] = new byte[255];
+		
+		System.out.println("Enter no");
+		System.in.read(b);
+		System.out.println(b);
+		String s = new String(b);
+		
+		
+	}
+}

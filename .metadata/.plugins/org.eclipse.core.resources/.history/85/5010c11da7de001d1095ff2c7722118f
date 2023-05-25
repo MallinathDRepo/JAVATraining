@@ -1,0 +1,12 @@
+package calculator;
+
+public class Demo {
+	private void psvm() {
+
+		byte b[] = new byte[255];
+		
+		System.out.println("Enter no");
+		System.in.read(b);
+		
+	}
+}

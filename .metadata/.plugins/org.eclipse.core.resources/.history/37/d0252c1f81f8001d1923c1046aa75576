@@ -1,0 +1,5 @@
+package com.encora.employee.service;
+
+public interface EmployeeService {
+
+}

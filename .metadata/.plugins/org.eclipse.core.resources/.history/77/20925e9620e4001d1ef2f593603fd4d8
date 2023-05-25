@@ -1,0 +1,9 @@
+package Triangle;
+
+import abstractDemo.Start;
+
+public class triangle extends Start{
+	
+		Start s = new Start();
+		
+}

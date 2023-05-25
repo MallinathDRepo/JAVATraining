@@ -1,0 +1,15 @@
+package Triangle;
+
+import abstractDemo.Start;
+
+public class triangle extends Start{
+
+	public void side() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+//		Start s = new Start();
+	
+		
+}
