@@ -56,5 +56,4 @@ public class EmployeeHandler implements ActionListener {
 		System.out.println(empDTO);
 		return empDTO;
 	}
-
 }

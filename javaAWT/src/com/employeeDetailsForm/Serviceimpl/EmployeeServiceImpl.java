@@ -54,21 +54,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public void updateEmployee(EmployeeDTO employeeDTO) {
 		try {
-		DriverManager.registerDriver(new Driver());
-		con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb?characterEncoding=utf8", "root", "root123");
-		PreparedStatement ps = con.prepareStatement("UPDATE javadb.employeedata"
-				+ "SET employee_Id=? employee_name=?, gender=?, pf=?, graduity=?, meal_card=?, office_location=?"
-				+ "WHERE employee_id=?");
-		
-		ps.setInt(1, employeeDTO.getEmployeeID());
-		ps.setString(2, employeeDTO.getEmployeeName());
-		ps.setString(3, employeeDTO.getGender());
-		ps.setBoolean(4,employeeDTO.getPf());
-		ps.setBoolean(5, employeeDTO.getGraduity());
-		ps.setBoolean(6, employeeDTO.getMealCard());
-		ps.setString(7, employeeDTO.getOfficeLocation());
-		ps.execute();
-		}
+				DriverManager.registerDriver(new Driver());
+				con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb?characterEncoding=utf8", "root", "root123");
+				PreparedStatement ps = con.prepareStatement("UPDATE javadb.employeedata"
+						+ "SET employee_Id=?, employee_name=?, gender=?, pf=?, graduity=?, meal_card=?, office_location=?"
+						+ "WHERE employee_id=?");
+				
+				ps.setInt(1, employeeDTO.getEmployeeID());
+				ps.setString(2, employeeDTO.getEmployeeName());
+				ps.setString(3, employeeDTO.getGender());
+				ps.setBoolean(4, employeeDTO.getPf());
+				ps.setBoolean(5, employeeDTO.getGraduity());
+				ps.setBoolean(6, employeeDTO.getMealCard());
+				ps.setString(7, employeeDTO.getOfficeLocation());
+				ps.execute();
+			}
 		 catch (SQLException e) {
 				e.printStackTrace();
 			}finally {
@@ -89,7 +89,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 				+ "where employee_id =?");
 		ps.setInt(1, employeeDTO.getEmployeeID());
 		ResultSet rs = ps.executeQuery();
-		if(rs.next()) {
+		while(rs.next()) {
 			dto.setEmployeeName(rs.getString(2));
 			dto.setGender(rs.getNString(3));
 			dto.setPf(rs.getBoolean(4));
@@ -104,8 +104,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 			try {
 					con.close();
 					System.out.println(con.isClosed());
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+			} catch(SQLException e) {
 				e.printStackTrace();
 			}
 			return dto;
